@@ -27,46 +27,57 @@
           This survey aims to understand the view software developers and non-IT
           people have on the open source movement.
         </p>
-        <p>
-          <label for="name" id="name-label">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="person_name"
-            required
-            autocomplete="name"
-            placeholder="Full name"
-          />
-        </p>
-        <p>
-          <label for="email" id="email-label">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="person_email"
-            required
-            autocomplete="email"
-            placeholder="Email we can contact you at"
-          />
-        </p>
-        <p>
-          <label for="age" id="number-label">Age:</label>
-          <input
-            type="number"
-            id="number"
-            name="person_age"
-            required
-            min="13"
-            max="150"
-            placeholder="Current age"
-          />
-        </p>
+        <section id="personal-info">
+          <div>
+            <label for="name" id="name-label">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="person_name"
+              required
+              autocomplete="name"
+              placeholder="Full name"
+            />
+          </div>
+          <div>
+            <label for="email" id="email-label">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="person_email"
+              required
+              autocomplete="email"
+              placeholder="Email we can contact you at"
+            />
+          </div>
+          <div>
+            <label for="number" id="number-label">Age:</label>
+            <input
+              type="number"
+              id="number"
+              name="person_age"
+              required
+              min="13"
+              max="150"
+              placeholder="Current age"
+            />
+          </div>
+          <div>
+            <label for="dropdown">Your background:</label>
+            <select id="dropdown">
+              <option value="not-it">Non-IT</option>
+              <option value="oss-dev">Open Source Developer</option>
+              <option value="it-prof">IT Professional</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+        </section>
         <fieldset>
           <legend>
-            How to you perceive the impact of open source software to be on
+            How do you perceive the impact of open source software to be on
             society?
           </legend>
-          <p>
+          <div>
             <input
               type="radio"
               name="perceived-impact"
@@ -75,8 +86,8 @@
               required
             />
             <label for="impact-positive">Positive</label>
-          </p>
-          <p>
+          </div>
+          <div>
             <input
               type="radio"
               name="perceived-impact"
@@ -85,8 +96,8 @@
               required
             />
             <label for="impact-neutral">Neutral / Don't know</label>
-          </p>
-          <p>
+          </div>
+          <div>
             <input
               type="radio"
               name="perceived-impact"
@@ -95,10 +106,50 @@
               required
             />
             <label for="impact-negative">Negative</label>
-          </p>
+          </div>
         </fieldset>
+        <fieldset>
+          <legend>
+            In which areas do you think open source software could help?
+          </legend>
+          <div>
+            <input
+              type="checkbox"
+              name="area-impacted"
+              id="area-health"
+              value="health"
+            />
+            <label for="area-health">Healthcare</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="area-impacted"
+              id="area-education"
+              value="education"
+            />
+            <label for="area-education">Education</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="area-impacted"
+              id="area-government"
+              value="government"
+            />
+            <label for="area-government">E-Government</label>
+          </div>
+        </fieldset>
+        <p>
+          Additional comments (max 500 characters):
+          <textarea
+            placeholder="Type your feedback here"
+            maxlength="500"
+            rows="5"
+          ></textarea>
+        </p>
         <div id="submit-wrapper">
-          <button type="submit">
+          <button type="submit" id="submit">
             Send
           </button>
         </div>

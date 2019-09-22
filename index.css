@@ -19,6 +19,7 @@ main {
   background-color: white;
   border: 1px solid gray;
   box-shadow: 1rem -0.5rem 0.75rem rgba(127, 127, 127, 0.4);
+  margin: 1rem;
   padding: 2vw 3vw;
 }
 
@@ -36,6 +37,38 @@ main {
   margin: 2vh;
   border: 1px solid darkblue;
   border-radius: 15px;
+}
+
+#personal-info div {
+  margin: 1rem;
+}
+
+#personal-info label {
+  display: inline-block;
+  width: 25%;
+  text-align: right;
+}
+
+#personal-info input {
+  width: 50%;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+}
+
+#submit {
+  outline: none;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: #5998ff;
+}
+
+#submit:active {
+  background-color: #5362ff;
 }
 
 footer {
