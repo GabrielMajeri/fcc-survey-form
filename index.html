@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link href="index.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="index.css" rel="stylesheet" type="text/css" media="all" />
 
-        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" defer></script>
-        <script type="text/javascript">
-            const projectName = 'survey-form';
-            localStorage.setItem('example_project', 'Survey Form');
-        </script>
+    <script
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      defer
+    ></script>
+    <script type="text/javascript">
+      const projectName = "survey-form";
+      localStorage.setItem("example_project", "Survey Form");
+    </script>
 
-        <title>Open Source Software Survey</title>
-    </head>
-    <body>
-
-    </body>
+    <title>Open Source Software Survey</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Open Source Survey</h1>
+    </header>
+    <main>
+      <form id="survey-form" onsubmit="return false;">
+        <p id="description">
+          This survey aims to understand the view software developers and non-IT
+          people have on the open source movement.
+        </p>
+        <p>
+          <label for="name" id="name-label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="person_name"
+            required
+            autocomplete="name"
+            placeholder="Full name"
+          />
+        </p>
+        <p>
+          <label for="email" id="email-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="person_email"
+            required
+            autocomplete="email"
+            placeholder="Email we can contact you at"
+          />
+        </p>
+        <p>
+          <label for="age" id="number-label">Age:</label>
+          <input
+            type="number"
+            id="number"
+            name="person_age"
+            required
+            min="13"
+            max="150"
+            placeholder="Current age"
+          />
+        </p>
+        <fieldset>
+          <legend>
+            How to you perceive the impact of open source software to be on
+            society?
+          </legend>
+          <p>
+            <input
+              type="radio"
+              name="perceived-impact"
+              id="impact-positive"
+              value="+1"
+              required
+            />
+            <label for="impact-positive">Positive</label>
+          </p>
+          <p>
+            <input
+              type="radio"
+              name="perceived-impact"
+              id="impact-neutral"
+              value="0"
+              required
+            />
+            <label for="impact-neutral">Neutral / Don't know</label>
+          </p>
+          <p>
+            <input
+              type="radio"
+              name="perceived-impact"
+              id="impact-negative"
+              value="-1"
+              required
+            />
+            <label for="impact-negative">Negative</label>
+          </p>
+        </fieldset>
+        <div id="submit-wrapper">
+          <button type="submit">
+            Send
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <small
+        >© 2019 Gabriel Majeri &mdash; This site is
+        <a
+          href="https://github.com/GabrielMajeri/fcc-survey-form"
+          target="_blank"
+          >open source</a
+        ></small
+      >
+    </footer>
+  </body>
 </html>
